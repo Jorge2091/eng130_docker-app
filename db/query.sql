@@ -17,6 +17,6 @@ CREATE TABLE Sessions(
 	location VARCHAR(50) NOT NULL,
 	PRIMARY KEY (session_id),
 	CONSTRAINT fk_user
-		FOREIGN KEY (user_id)
-			REFERENCES Users(user_id)
+	FOREIGN KEY (user_id)
+	REFERENCES Users(user_id)
 );
