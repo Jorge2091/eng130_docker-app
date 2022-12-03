@@ -10,4 +10,6 @@ chrome://flags/#unsafely-treat-insecure-origin-as-secure
 
 <img src="../images/insert.png">
 
+**all this steps is similar to chrome in phones**
+
 Go to the url and access anything
