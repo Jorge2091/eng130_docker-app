@@ -12,3 +12,4 @@ docker compose up -d
 ```
 and go to port http://localhost:2500
 or to whatever port you changed using the `docker-compose.yml` file, if edited
+
