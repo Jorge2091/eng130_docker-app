@@ -13,3 +13,9 @@ docker compose up -d
 and go to port http://localhost:2500
 or to whatever port you changed using the `docker-compose.yml` file, if edited
 
+### Or run this 
+```
+git clone https://github.com/Jorge2091/eng130_docker-app
+cd eng130_docker-app
+docker compose up -d
+```
