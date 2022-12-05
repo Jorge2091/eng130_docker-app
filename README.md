@@ -8,7 +8,7 @@ cd eng130_docker-app
 ```
 then inside the repository, run docker compose
 ```
-sudo docker compose up -d
+sudo docker compose up -d --remove-orphans
 ```
 and go to port http://localhost
 or to whatever port you changed using the `docker-compose.yml` file, if edited
@@ -17,5 +17,5 @@ or to whatever port you changed using the `docker-compose.yml` file, if edited
 ```
 git clone https://github.com/Jorge2091/eng130_docker-app
 cd eng130_docker-app
-sudo docker compose up -d
+sudo docker compose up -d --remove-orphans
 ```
