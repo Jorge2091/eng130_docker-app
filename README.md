@@ -10,7 +10,7 @@ then inside the repository, run docker compose
 ```
 sudo docker compose up -d
 ```
-and go to port http://localhost:2500
+and go to port http://localhost
 or to whatever port you changed using the `docker-compose.yml` file, if edited
 
 ### Or run this 

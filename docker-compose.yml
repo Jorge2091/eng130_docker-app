@@ -1,7 +1,7 @@
 services: 
-  db:
+  db11:
     image: postgres:10.23-alpine
-    container_name: db
+    container_name: db11
     restart: always
     volumes:
       - ./db/:/docker-entrypoint-initdb.d/
@@ -9,15 +9,15 @@ services:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=spartaglobal
 
-  compose:
+  compose11:
     image: jorge2091/docker-app5
-    container_name: compose
+    container_name: compose11
     restart: always
     ports:
       - "80:80"
     links:
-      - db
+      - db11
     environment: 
-      - POSTGRES=postgres://db:5432
+      - POSTGRES=postgres://db11:5432
     depends_on:
-      - db
+      - db11
