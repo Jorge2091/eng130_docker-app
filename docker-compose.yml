@@ -10,14 +10,17 @@ services:
       - POSTGRES_PASSWORD=spartaglobal
 
   compose:
-    image: jorge2091/docker-app5
+    image: jorge2091/docker-test1
     container_name: compose
     restart: always
     ports:
       - "80:80"
     links:
       - db
-    environment: 
+    environment:
+      - BUCKET=${BUCKET}
       - POSTGRES=postgres://db:5432
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY}
     depends_on:
       - db

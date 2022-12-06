@@ -1,3 +1,7 @@
+/*
+by Benedek Kovacs
+*/
+
 CREATE TABLE Users(
 	user_id INT GENERATED ALWAYS AS IDENTITY,
 	email VARCHAR(40) NOT NULL,
@@ -15,9 +19,19 @@ CREATE TABLE Sessions(
 	user_id INT NOT NULL,
 	posting_date DATE NOT NULL DEFAULT CURRENT_DATE,
 	posting_time TIME NOT NULL DEFAULT CURRENT_TIME,
-	location VARCHAR(50) NOT NULL,
+	location VARCHAR(60),
 	PRIMARY KEY (session_id),
-	CONSTRAINT fk_user
+	FOREIGN KEY (user_id)
+	REFERENCES Users(user_id)
+);
+
+CREATE TABLE Videos(
+	video_id INT GENERATED ALWAYS AS IDENTITY,
+	video_title VARCHAR(60),
+	location VARCHAR(60),
+	user_id INT NOT NULL,
+	video_link VARCHAR(200) NOT NULL,
+	PRIMARY KEY (video_id),
 	FOREIGN KEY (user_id)
 	REFERENCES Users(user_id)
 );
