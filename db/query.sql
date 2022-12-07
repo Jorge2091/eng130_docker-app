@@ -10,7 +10,6 @@ CREATE TABLE Users(
 	last_name VARCHAR(20) NOT NULL,
 	phone_number VARCHAR(11) NOT NULL,
 	is_admin BOOLEAN NOT NULL DEFAULT FALSE,
-	password_reset VARCHAR(60) NOT NULL DEFAULT FALSE,
 	PRIMARY KEY (user_id)
 );
 
@@ -21,6 +20,7 @@ CREATE TABLE Sessions(
 	posting_time TIME NOT NULL DEFAULT CURRENT_TIME,
 	location VARCHAR(60),
 	PRIMARY KEY (session_id),
+	CONSTRAINT fk_user
 	FOREIGN KEY (user_id)
 	REFERENCES Users(user_id)
 );
@@ -32,6 +32,7 @@ CREATE TABLE Videos(
 	user_id INT NOT NULL,
 	video_link VARCHAR(200) NOT NULL,
 	PRIMARY KEY (video_id),
+	CONSTRAINT fk_user
 	FOREIGN KEY (user_id)
 	REFERENCES Users(user_id)
 );
