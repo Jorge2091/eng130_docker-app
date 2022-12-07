@@ -19,3 +19,4 @@ git clone https://github.com/Jorge2091/eng130_docker-app
 cd eng130_docker-app
 sudo docker compose up -d --remove-orphans
 ```
+# requirement before running docker compose up
