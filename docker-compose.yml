@@ -10,7 +10,7 @@ services:
       - POSTGRES_PASSWORD=spartaglobal
 
   compose:
-    image: jorge2091/docker-app-s3
+    image: jorge2091/docker-test7
     container_name: compose
     restart: always
     ports:
@@ -22,5 +22,6 @@ services:
       - POSTGRES=postgres://db:5432
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY}
+      - MY_IP=${MY_IP}
     depends_on:
       - db
